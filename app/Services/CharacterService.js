@@ -30,6 +30,9 @@ class CharacterService {
       .get("starships") //NOTE whatever is added in the get will be appended to the baseURL
       .then(res => {
         console.log(4);
+
+        // let question = new Question(res.data)
+
         let characters = res.data.results.map(
           rawData => new Character(rawData)
         );
